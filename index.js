@@ -8,12 +8,22 @@ const returnLastTwoDrivers = function(drivers){
     return drivers.slice(Math.max(drivers.length - 2, 0))
 }
 
+
 const selectingDrivers = []
     selectingDrivers[0] = returnFirstTwoDrivers
     selectingDrivers.push(returnLastTwoDrivers)
 
 const createFareMultiplier = function(number) {
     return function(fare) { 
-        (number * fare)
+        return (number * fare)
       }
     }
+
+const fareDoubler = createFareMultiplier(2);
+
+
+const fareTripler = createFareMultiplier(3);
+
+const selectDifferentDrivers = function (drivers, driversToReturn) {
+    return driversToReturn(drivers);
+  };
