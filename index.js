@@ -13,7 +13,7 @@ const selectingDrivers = []
     selectingDrivers.push(returnLastTwoDrivers)
 
 const createFareMultiplier = function(number) {
-    return function() { 
-        (number * number)
+    return function(fare) { 
+        (number * fare)
       }
     }
